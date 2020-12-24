@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2020 | Rock&#39;s blog</title>
+  <title>软件安全复习笔记 | Rock&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Rock&#39;s blog">
-<meta property="og:url" content="http://example.com/archives/2020/index.html">
+  <meta name="description" content="2020年12月22日Boot过程Bios保存在主板上的闪存中,引导Bios:从地址0xFFF0开始,Bios引导时,会寻找MBR(引导扇区)存储的数据,根据第一阶段引导加载程序来加载第二阶段引导加载程序。第二阶段引导加载程序将操作系统的内核加载到内存中。 sudo1sudo &lt;command&gt;  提供自己的密码,以获得root权限 Linux文件存储结构一个文件由 目录项、inode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件安全复习笔记">
+<meta property="og:url" content="http://example.com/2020/12/24/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%85%A8%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Rock&#39;s blog">
+<meta property="og:description" content="2020年12月22日Boot过程Bios保存在主板上的闪存中,引导Bios:从地址0xFFF0开始,Bios引导时,会寻找MBR(引导扇区)存储的数据,根据第一阶段引导加载程序来加载第二阶段引导加载程序。第二阶段引导加载程序将操作系统的内核加载到内存中。 sudo1sudo &lt;command&gt;  提供自己的密码,以获得root权限 Linux文件存储结构一个文件由 目录项、inode">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-24T07:32:47.000Z">
+<meta property="article:modified_time" content="2020-12-24T07:33:24.118Z">
 <meta property="article:author" content="RockU">
 <meta property="article:tag" content="software security">
 <meta name="twitter:card" content="summary">
@@ -151,103 +155,178 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-软件安全复习笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      软件安全复习笔记
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/24/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%85%A8%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+
+        
+        <a href="/2020/12/24/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%85%A8%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
   	<time datetime="2020-12-24T07:32:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-24</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/24/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%85%A8%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/">软件安全复习笔记</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="2020年12月22日"><a href="#2020年12月22日" class="headerlink" title="2020年12月22日"></a>2020年12月22日</h2><h3 id="Boot过程"><a href="#Boot过程" class="headerlink" title="Boot过程"></a>Boot过程</h3><p>Bios保存在主板上的闪存中,引导Bios:从地址<strong>0xFFF0</strong>开始,Bios引导时,会寻找MBR(引导扇区)存储的数据,根据第一阶段引导加载程序来加载第二阶段引导加载程序。第二阶段引导加载程序将操作系统的内核加载到内存中。</p>
+<h3 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo &lt;command&gt;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>提供自己的密码,以获得root权限</p>
+<h3 id="Linux文件存储结构"><a href="#Linux文件存储结构" class="headerlink" title="Linux文件存储结构"></a>Linux文件存储结构</h3><p>一个文件由 目录项、inode和数据块组成:目录项包括<strong>文件名和inode号码</strong>,<strong>inode为文件索引节点,包含文件的基础信息以及数据块的指针</strong>,数据块:包含文件的具体内容</p>
+<p><strong>inode</strong>:硬盘的最小存储单位叫扇区,每个扇区存储512字节。一般一次读取多个扇区,多个扇区称为block,存储文件的信息(文件创建者、修改日期…)等成为inode。</p>
+<p>目录也是一种文件:</p>
+<p>链接是对文件的引用,可以让</p>
+<h3 id="Linux文件控制"><a href="#Linux文件控制" class="headerlink" title="Linux文件控制"></a>Linux文件控制</h3><p>文件夹的控制/文件的控制</p>
+<p>如果文件不可执行,即使加上set-uid也没有用:使用ls -l命令会变成S</p>
+<p>Android系统会为每个Android应用分配一个独一无二的Uid</p>
+<h3 id="栈与函数"><a href="#栈与函数" class="headerlink" title="栈与函数"></a>栈与函数</h3><p>调用参数:</p>
+<p>​    将参数压入栈(反向)</p>
+<p>​    压入返回地址</p>
+<p>​    跳转到要执行的函数的地址</p>
+<p>被调用参数:</p>
+<p>​    将旧帧指针压入栈</p>
+<p>​    将帧指针设置为当前栈末尾的位置</p>
+<p>​    将局部变量压入栈</p>
+<p>函数返回:</p>
+<p>​    重置栈帧</p>
+<p>​    回到返回地址</p>
+<h3 id="过期内存"><a href="#过期内存" class="headerlink" title="过期内存"></a>过期内存</h3><p>当所指向的对象被释放或者收回,但是对指针没有做任何的修改,导致该指针依旧指向已经回收的内存,会发生悬空指针的问题</p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/12/24/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%85%A8%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/24/hello-world/" class="archive-article-date">
-  	<time datetime="2020-12-24T07:05:39.981Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/24/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/11/first-blog/" class="archive-article-date">
-  	<time datetime="2020-10-11T06:46:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/11/first-blog/">first blog</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -270,8 +349,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
