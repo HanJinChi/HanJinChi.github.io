@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>network_security | Rock&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2020年12月25日CSMA&#x2F;CA: 具有避免冲突的载波侦听多路访问 SSID:服务设施识别器,这是访问接入点使用的名字,用于识别网络 WEP:一种协议有线对等密钥,用于提供访问接入点和无线设备之间的验证和加密 虚拟局域网(VLAN)广播流量被限制在VLAN中。">
+  <meta name="description" content="2020年12月25日CSMA&#x2F;CA: 具有避免冲突的载波侦听多路访问 SSID:服务设施识别器,这是访问接入点使用的名字,用于识别网络 WEP:一种协议有线对等密钥,用于提供访问接入点和无线设备之间的验证和加密 虚拟局域网(VLAN)广播流量被限制在VLAN中。 两类网络层: (1)端到端的由一个单独的机构维护的封闭网络,如基于电话的网络 (2)网际协议 DHCP(DOS)饥饿攻击原理:伪造大量">
 <meta property="og:type" content="article">
 <meta property="og:title" content="network_security">
 <meta property="og:url" content="http://example.com/2020/12/25/network-security/index.html">
 <meta property="og:site_name" content="Rock&#39;s blog">
-<meta property="og:description" content="2020年12月25日CSMA&#x2F;CA: 具有避免冲突的载波侦听多路访问 SSID:服务设施识别器,这是访问接入点使用的名字,用于识别网络 WEP:一种协议有线对等密钥,用于提供访问接入点和无线设备之间的验证和加密 虚拟局域网(VLAN)广播流量被限制在VLAN中。">
+<meta property="og:description" content="2020年12月25日CSMA&#x2F;CA: 具有避免冲突的载波侦听多路访问 SSID:服务设施识别器,这是访问接入点使用的名字,用于识别网络 WEP:一种协议有线对等密钥,用于提供访问接入点和无线设备之间的验证和加密 虚拟局域网(VLAN)广播流量被限制在VLAN中。 两类网络层: (1)端到端的由一个单独的机构维护的封闭网络,如基于电话的网络 (2)网际协议 DHCP(DOS)饥饿攻击原理:伪造大量">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-25T03:13:31.000Z">
-<meta property="article:modified_time" content="2020-12-25T03:29:45.748Z">
+<meta property="article:modified_time" content="2020-12-27T03:15:56.861Z">
 <meta property="article:author" content="RockU">
 <meta property="article:tag" content="日常学习">
 <meta name="twitter:card" content="summary">
@@ -169,7 +169,19 @@
 <p>SSID:服务设施识别器,这是访问接入点使用的名字,用于识别网络</p>
 <p>WEP:一种协议有线对等密钥,用于提供访问接入点和无线设备之间的验证和加密</p>
 <h3 id="虚拟局域网-VLAN"><a href="#虚拟局域网-VLAN" class="headerlink" title="虚拟局域网(VLAN)"></a>虚拟局域网(VLAN)</h3><p>广播流量被限制在VLAN中。</p>
-
+<p>两类网络层:</p>
+<p>(1)端到端的由一个单独的机构维护的封闭网络,如基于电话的网络</p>
+<p>(2)网际协议</p>
+<h3 id="DHCP-DOS-饥饿攻击"><a href="#DHCP-DOS-饥饿攻击" class="headerlink" title="DHCP(DOS)饥饿攻击"></a>DHCP(DOS)饥饿攻击</h3><p>原理:伪造大量的DHCP申请包,获取大量的ip地址,以耗尽DHCP服务器的ip地址,无法为合法的DHCP客户端分配ip地址,或导致DHCP服务器消耗过多的系统资源,无法处理正常业务</p>
+<h3 id="DHCP欺骗攻击"><a href="#DHCP欺骗攻击" class="headerlink" title="DHCP欺骗攻击"></a>DHCP欺骗攻击</h3><p>欺骗性DHCP服务器(攻击者)为客户端分配一个网络中无效的ip地址</p>
+<p>应对方法:</p>
+<blockquote>
+<p>(1) IP过滤</p>
+<p>(2) NAT转换</p>
+<p>(3) VPN</p>
+<p>(4) IPV4和IPV6的加密</p>
+</blockquote>
+<h3 id="IP过滤"><a href="#IP过滤" class="headerlink" title="IP过滤"></a>IP过滤</h3>
       
 
       
@@ -292,7 +304,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2020%E5%B9%B412%E6%9C%8825%E6%97%A5"><span class="toc-number">1.</span> <span class="toc-text">2020年12月25日</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91-VLAN"><span class="toc-number">1.0.1.</span> <span class="toc-text">虚拟局域网(VLAN)</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2020%E5%B9%B412%E6%9C%8825%E6%97%A5"><span class="toc-number">1.</span> <span class="toc-text">2020年12月25日</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91-VLAN"><span class="toc-number">1.0.1.</span> <span class="toc-text">虚拟局域网(VLAN)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DHCP-DOS-%E9%A5%A5%E9%A5%BF%E6%94%BB%E5%87%BB"><span class="toc-number">1.0.2.</span> <span class="toc-text">DHCP(DOS)饥饿攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DHCP%E6%AC%BA%E9%AA%97%E6%94%BB%E5%87%BB"><span class="toc-number">1.0.3.</span> <span class="toc-text">DHCP欺骗攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IP%E8%BF%87%E6%BB%A4"><span class="toc-number">1.0.4.</span> <span class="toc-text">IP过滤</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
