@@ -15,11 +15,14 @@
 <meta property="og:site_name" content="Rock&#39;s blog">
 <meta property="og:description" content="2020年12月25日CSMA&#x2F;CA: 具有避免冲突的载波侦听多路访问 SSID:服务设施识别器,这是访问接入点使用的名字,用于识别网络 WEP:一种协议有线对等密钥,用于提供访问接入点和无线设备之间的验证和加密">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2020/12/25/network-security/2.jfif">
+<meta property="og:image" content="http://example.com/2020/12/25/network-security/1.jfif">
 <meta property="article:published_time" content="2020-12-25T03:13:31.000Z">
-<meta property="article:modified_time" content="2020-12-27T03:42:35.899Z">
+<meta property="article:modified_time" content="2020-12-28T03:41:19.237Z">
 <meta property="article:author" content="RockU">
 <meta property="article:tag" content="日常学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2020/12/25/network-security/2.jfif">
   
     <link rel="alternative" href="/atom.xml" title="Rock&#39;s blog" type="application/atom+xml">
   
@@ -183,7 +186,20 @@
 <p>(3) VPN</p>
 <p>(4) IPV4和IPV6的加密</p>
 </blockquote>
-<h3 id="IP过滤"><a href="#IP过滤" class="headerlink" title="IP过滤"></a>IP过滤</h3>
+<h3 id="IP过滤"><a href="#IP过滤" class="headerlink" title="IP过滤"></a>IP过滤</h3><h2 id="2020年12月28日"><a href="#2020年12月28日" class="headerlink" title="2020年12月28日"></a>2020年12月28日</h2><h3 id="TCP-基于头部的攻击"><a href="#TCP-基于头部的攻击" class="headerlink" title="TCP 基于头部的攻击"></a>TCP 基于头部的攻击</h3><p>使用TCP头部进行探测攻击,使用一些不同的字段,如发送无效的标志组合来确认操作系统如何回应。</p>
+<h3 id="TCP-Portscan"><a href="#TCP-Portscan" class="headerlink" title="TCP Portscan"></a>TCP Portscan</h3><p>① Client端发送SYN</p>
+<p>② Server端返回SYN/ACK,表明端口开放</p>
+<p>③ Client端返回ACK,表明连接建立</p>
+<p>④ Client端主动断开连接</p>
+<img src="/2020/12/25/network-security/2.jfif" class title="This is an example image">
+
+<p>SYN扫描过程：</p>
+<p>端口开放：1、Client发送SYN 2、Server端发送SYN/ACK 3、Client发送RST断开（只需要前两步就可以判断端口开放）</p>
+<p>端口关闭：1、Client发送SYN 2、Server端回复RST（表示端口关闭）</p>
+<p>优点：**SYN扫描要比TCP Connect()扫描隐蔽一些，SYN仅仅需要发送初始的SYN数据包给目标主机，如果端口开放，则相应SYN-ACK数据包；如果关闭，则响应RST数据包。</p>
+<img src="/2020/12/25/network-security/1.jfif" class title="This is an example image">
+
+
       
 
       
@@ -306,7 +322,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2020%E5%B9%B412%E6%9C%8825%E6%97%A5"><span class="toc-number">1.</span> <span class="toc-text">2020年12月25日</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91-VLAN"><span class="toc-number">1.0.1.</span> <span class="toc-text">虚拟局域网(VLAN)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DHCP-DOS-%E9%A5%A5%E9%A5%BF%E6%94%BB%E5%87%BB"><span class="toc-number">1.0.2.</span> <span class="toc-text">DHCP(DOS)饥饿攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DHCP%E6%AC%BA%E9%AA%97%E6%94%BB%E5%87%BB"><span class="toc-number">1.0.3.</span> <span class="toc-text">DHCP欺骗攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IP%E8%BF%87%E6%BB%A4"><span class="toc-number">1.0.4.</span> <span class="toc-text">IP过滤</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2020%E5%B9%B412%E6%9C%8825%E6%97%A5"><span class="toc-number">1.</span> <span class="toc-text">2020年12月25日</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91-VLAN"><span class="toc-number">1.0.1.</span> <span class="toc-text">虚拟局域网(VLAN)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DHCP-DOS-%E9%A5%A5%E9%A5%BF%E6%94%BB%E5%87%BB"><span class="toc-number">1.0.2.</span> <span class="toc-text">DHCP(DOS)饥饿攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DHCP%E6%AC%BA%E9%AA%97%E6%94%BB%E5%87%BB"><span class="toc-number">1.0.3.</span> <span class="toc-text">DHCP欺骗攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IP%E8%BF%87%E6%BB%A4"><span class="toc-number">1.0.4.</span> <span class="toc-text">IP过滤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2020%E5%B9%B412%E6%9C%8828%E6%97%A5"><span class="toc-number">1.1.</span> <span class="toc-text">2020年12月28日</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP-%E5%9F%BA%E4%BA%8E%E5%A4%B4%E9%83%A8%E7%9A%84%E6%94%BB%E5%87%BB"><span class="toc-number">1.1.1.</span> <span class="toc-text">TCP 基于头部的攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP-Portscan"><span class="toc-number">1.1.2.</span> <span class="toc-text">TCP Portscan</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
