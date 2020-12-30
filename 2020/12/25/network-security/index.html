@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://example.com/2020/12/25/network-security/2.jfif">
 <meta property="og:image" content="http://example.com/2020/12/25/network-security/1.jfif">
 <meta property="article:published_time" content="2020-12-25T03:13:31.000Z">
-<meta property="article:modified_time" content="2020-12-28T03:41:19.237Z">
+<meta property="article:modified_time" content="2020-12-29T09:27:48.350Z">
 <meta property="article:author" content="RockU">
 <meta property="article:tag" content="日常学习">
 <meta name="twitter:card" content="summary">
@@ -199,6 +199,19 @@
 <p>优点：**SYN扫描要比TCP Connect()扫描隐蔽一些，SYN仅仅需要发送初始的SYN数据包给目标主机，如果端口开放，则相应SYN-ACK数据包；如果关闭，则响应RST数据包。</p>
 <img src="/2020/12/25/network-security/1.jfif" class title="This is an example image">
 
+<h3 id="Authentication-Based"><a href="#Authentication-Based" class="headerlink" title="Authentication Based"></a>Authentication Based</h3><p>TCP中没有认证内容,端口作为应用的认证</p>
+<h3 id="UDP-Portscan"><a href="#UDP-Portscan" class="headerlink" title="UDP Portscan"></a>UDP Portscan</h3><p>确定哪些UDP服务有效</p>
+<h3 id="SSL-stripping"><a href="#SSL-stripping" class="headerlink" title="SSL stripping"></a>SSL stripping</h3><p>受害者没有直接连接到网站,而被连接到攻击者那里,之后攻击者与该网站连接</p>
+<h3 id="SMTP"><a href="#SMTP" class="headerlink" title="SMTP"></a>SMTP</h3><p>MTA用于电子邮件服务器存储转发电子邮件,</p>
+<p>UA(用户代理)是和用户接口的应用程序,允许用户产生、阅读、发送和管理电子邮件信息</p>
+<p>SMTP不关心消息本身的格式或内容,向邮件中添加日志记录信息,指明邮件采用的路径</p>
+<h4 id="基于验证的攻击"><a href="#基于验证的攻击" class="headerlink" title="基于验证的攻击:"></a>基于验证的攻击:</h4><p>采用伪冒发送者的方式  ,对策:检查发送者的域是否有效(采用域名服务)</p>
+<p>发送邮件时,初始时客户端会在邮件消息上填加一个UA头部,之后每经过一个MTA客户端就添加一个MTA就添加一个MTA头部,每个MTA头部客户端都要与MTA服务器进行”from”和”to”的电子邮件地址通信</p>
+<h3 id="MIME"><a href="#MIME" class="headerlink" title="MIME"></a>MIME</h3><p>支持任意格式的数据,并允许新的数据格式。</p>
+<h3 id="电子邮件过滤"><a href="#电子邮件过滤" class="headerlink" title="电子邮件过滤"></a>电子邮件过滤</h3><p>电子邮件过滤器:一般配置在电子邮件服务器之前,根据过滤器类型的不同,消息可以在未修改和修改状态传输,并除去恶意内容</p>
+<h3 id="Autonomous-Systems"><a href="#Autonomous-Systems" class="headerlink" title="Autonomous Systems"></a>Autonomous Systems</h3><p>由单一实体控制的网络</p>
+<p>拥有相同的内部和外部路由策略</p>
+<p><strong>BGP</strong>:不同网络间交换消息的协议(边界网关协议)</p>
 
       
 
@@ -322,7 +335,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2020%E5%B9%B412%E6%9C%8825%E6%97%A5"><span class="toc-number">1.</span> <span class="toc-text">2020年12月25日</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91-VLAN"><span class="toc-number">1.0.1.</span> <span class="toc-text">虚拟局域网(VLAN)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DHCP-DOS-%E9%A5%A5%E9%A5%BF%E6%94%BB%E5%87%BB"><span class="toc-number">1.0.2.</span> <span class="toc-text">DHCP(DOS)饥饿攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DHCP%E6%AC%BA%E9%AA%97%E6%94%BB%E5%87%BB"><span class="toc-number">1.0.3.</span> <span class="toc-text">DHCP欺骗攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IP%E8%BF%87%E6%BB%A4"><span class="toc-number">1.0.4.</span> <span class="toc-text">IP过滤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2020%E5%B9%B412%E6%9C%8828%E6%97%A5"><span class="toc-number">1.1.</span> <span class="toc-text">2020年12月28日</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP-%E5%9F%BA%E4%BA%8E%E5%A4%B4%E9%83%A8%E7%9A%84%E6%94%BB%E5%87%BB"><span class="toc-number">1.1.1.</span> <span class="toc-text">TCP 基于头部的攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP-Portscan"><span class="toc-number">1.1.2.</span> <span class="toc-text">TCP Portscan</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2020%E5%B9%B412%E6%9C%8825%E6%97%A5"><span class="toc-number">1.</span> <span class="toc-text">2020年12月25日</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91-VLAN"><span class="toc-number">1.0.1.</span> <span class="toc-text">虚拟局域网(VLAN)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DHCP-DOS-%E9%A5%A5%E9%A5%BF%E6%94%BB%E5%87%BB"><span class="toc-number">1.0.2.</span> <span class="toc-text">DHCP(DOS)饥饿攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DHCP%E6%AC%BA%E9%AA%97%E6%94%BB%E5%87%BB"><span class="toc-number">1.0.3.</span> <span class="toc-text">DHCP欺骗攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IP%E8%BF%87%E6%BB%A4"><span class="toc-number">1.0.4.</span> <span class="toc-text">IP过滤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2020%E5%B9%B412%E6%9C%8828%E6%97%A5"><span class="toc-number">1.1.</span> <span class="toc-text">2020年12月28日</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP-%E5%9F%BA%E4%BA%8E%E5%A4%B4%E9%83%A8%E7%9A%84%E6%94%BB%E5%87%BB"><span class="toc-number">1.1.1.</span> <span class="toc-text">TCP 基于头部的攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP-Portscan"><span class="toc-number">1.1.2.</span> <span class="toc-text">TCP Portscan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Authentication-Based"><span class="toc-number">1.1.3.</span> <span class="toc-text">Authentication Based</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP-Portscan"><span class="toc-number">1.1.4.</span> <span class="toc-text">UDP Portscan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSL-stripping"><span class="toc-number">1.1.5.</span> <span class="toc-text">SSL stripping</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SMTP"><span class="toc-number">1.1.6.</span> <span class="toc-text">SMTP</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E9%AA%8C%E8%AF%81%E7%9A%84%E6%94%BB%E5%87%BB"><span class="toc-number">1.1.6.1.</span> <span class="toc-text">基于验证的攻击:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MIME"><span class="toc-number">1.1.7.</span> <span class="toc-text">MIME</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E8%BF%87%E6%BB%A4"><span class="toc-number">1.1.8.</span> <span class="toc-text">电子邮件过滤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Autonomous-Systems"><span class="toc-number">1.1.9.</span> <span class="toc-text">Autonomous Systems</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
